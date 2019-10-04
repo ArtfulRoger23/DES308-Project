@@ -24,6 +24,7 @@ public class Target : MonoBehaviour
 
         Vector3 targetDirection = transform.forward;
         float targetMagnitude = delta * Mathf.Sin(Time.time * speed);
+        
 
         transform.position += targetDirection * targetMagnitude;
     }
