@@ -7,7 +7,7 @@ public class FinishLine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("Player").SendMessage("Finish");
+        GameObject.Find("PlayerFPSController").SendMessage("Finish");
 
     }
 
