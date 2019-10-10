@@ -16,6 +16,7 @@ public class PlayerLook : MonoBehaviour
     {
         LockCursor();
         xAxisClamp = 45.0f;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
     }
 
     private void LockCursor()

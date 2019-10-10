@@ -26,7 +26,7 @@ public class Respawn : MonoBehaviour
 
 
         //player.transform.position = spawn.transform.position;
-        //Debug.Log(player.transform.name);
+        Debug.Log(other.transform.name);
     }
 
 
