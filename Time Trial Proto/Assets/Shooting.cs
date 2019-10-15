@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Shooting : MonoBehaviour
 {
@@ -9,13 +11,14 @@ public class Shooting : MonoBehaviour
     ScoreCount scoreCount;
 
     public Camera fpsCam;
-    
 
 
+   
     private void Start()
     {
         scoreCount = FindObjectOfType<ScoreCount>();
         mAudioSrc = GetComponent<AudioSource>();
+        
     }
     void Update()
     {
@@ -51,7 +54,12 @@ public class Shooting : MonoBehaviour
 
                     hit.rigidbody.AddForce((hit.normal * impactForce) * -1);
 
-                    Destroy(target, 0.3f);
+                    
+
+                    Destroy(target, 0.1f);
+                    
+
+
                 }
             }
         }
