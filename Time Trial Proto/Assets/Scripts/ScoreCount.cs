@@ -20,5 +20,6 @@ public class ScoreCount : MonoBehaviour
     void Update()
     {
         text.text = "Score: " + score;
+
     }
 }
