@@ -1,18 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Shooting : MonoBehaviour
 {
     private AudioSource mAudioSrc;
     public float range = 100f;
-    public float impactForce = 100f;
+    private float impactForce = 50f;
 
     ScoreCount scoreCount;
 
     public Camera fpsCam;
 
-
+    LevelHandler levelHandler;
 
 
    
@@ -20,7 +21,9 @@ public class Shooting : MonoBehaviour
     {
         scoreCount = FindObjectOfType<ScoreCount>();
         mAudioSrc = GetComponent<AudioSource>();
-        
+
+        levelHandler = FindObjectOfType<LevelHandler>();
+
     }
     void Update()
     {
@@ -28,9 +31,18 @@ public class Shooting : MonoBehaviour
         {
             mAudioSrc.Play();
             Shoot();
+            levelHandler.totalShots++;
         }
 
+        if(Input.GetKey(KeyCode.P))
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
 
+        if(Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene("Level 1");
+        }
 
     void Shoot()
         {
@@ -47,11 +59,16 @@ public class Shooting : MonoBehaviour
                     if (target.isEnemy == true)
                     {
                         scoreCount.score += 1;
+                        Debug.Log("Shot enemy");
+                        levelHandler.enemiesHit++;
+                    
                     }
 
                     if (target.isEnemy == false)
                     {
                         scoreCount.score -= 1;
+                        levelHandler.friendliesHit++;
+
                     }
 
                     hit.rigidbody.AddForce((hit.normal * impactForce) * -1);

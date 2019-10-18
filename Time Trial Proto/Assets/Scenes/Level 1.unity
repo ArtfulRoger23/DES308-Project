@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45001733, g: 0.50007385, b: 0.5755091, a: 1}
+  m_IndirectSpecularColor: {r: 0.4500168, g: 0.50007313, b: 0.57550794, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4050,8 +4050,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 2027612059}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 2027612059}
 --- !u!65 &174508210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6113,18 +6113,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2597044305685407218}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &242900525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242900523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a3126466c4594442820cc3cd510ce7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &242900527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6138,6 +6126,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2032839041}
+--- !u!82 &242900529
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242900523}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &243029441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8887217442193403095, guid: a1d25457111cfa3479ff5fddc8214790,
@@ -7008,8 +7092,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 656586241}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 656586241}
 --- !u!65 &291143679
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7955,8 +8039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 1178775145}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 1178775145}
 --- !u!65 &323948987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14967,8 +15051,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 1334635330}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 1334635330}
 --- !u!65 &528325192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19674,8 +19758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 1178775145}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 1178775145}
 --- !u!65 &701422517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26068,8 +26152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 1178775145}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 1178775145}
 --- !u!65 &957646507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27331,8 +27415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 1953311698}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 1953311698}
 --- !u!65 &1004819520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28790,8 +28874,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 1826200140}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 1826200140}
 --- !u!65 &1048795553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32962,8 +33046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 656586241}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 656586241}
 --- !u!65 &1225608234
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33767,8 +33851,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 1178775145}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 1178775145}
 --- !u!65 &1249264917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41290,8 +41374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 2027612059}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 2027612059}
 --- !u!65 &1507236811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41914,7 +41998,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 40
-  impactForce: 125
   fpsCam: {fileID: 1553832119}
 --- !u!82 &1523996563
 AudioSource:
@@ -47683,8 +47766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 1178775145}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 1178775145}
 --- !u!65 &1759239552
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52044,8 +52127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 2027612059}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 2027612059}
 --- !u!65 &1894153446
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55358,8 +55441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 698580778}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 698580778}
 --- !u!65 &2000021803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56647,6 +56730,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1881709764}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2064254769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2064254771}
+  - component: {fileID: 2064254770}
+  m_Layer: 0
+  m_Name: LevelHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2064254770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064254769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1b0197f8c042a4bb0600031b2d0d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesHit: 0
+  friendliesHit: 0
+  totalShots: 0
+  deaths: 0
+  timer: 0
+--- !u!4 &2064254771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064254769}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.76, y: 1.1613421, z: -28.631468}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2066357459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57684,8 +57815,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e4dd563d6fac24fabe029af08b20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFPSController: {fileID: 242900523}
-  RespawnPoint: {fileID: 698580778}
+  playerFPSController: {fileID: 242900523}
+  respawnPoint: {fileID: 698580778}
 --- !u!65 &2098391958
 BoxCollider:
   m_ObjectHideFlags: 0

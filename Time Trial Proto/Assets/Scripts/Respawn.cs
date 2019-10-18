@@ -1,21 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Analytics;
 
 
 public class Respawn : MonoBehaviour
 {
-    public GameObject PlayerFPSController;
-    public GameObject RespawnPoint;
+    public GameObject playerFPSController;
+    public GameObject respawnPoint;
     
 
     private CharacterController charController;
 
-    LevelManager LevelManager;
+    LevelHandler levelHandler;
+
+    
     void Start()
     {
-        LevelManager = FindObjectOfType<LevelManager>();
+        levelHandler = FindObjectOfType<LevelHandler>();
     }
 
 
@@ -23,11 +24,11 @@ public class Respawn : MonoBehaviour
     {
         charController = GetComponent<CharacterController>();
 
-        PlayerFPSController.GetComponent<CharacterController>().enabled = false;
-        PlayerFPSController.GetComponent<CharacterController>().transform.position = RespawnPoint.transform.position;
-        PlayerFPSController.GetComponent<CharacterController>().enabled = true;
-        LevelManager.IncrementDeaths();
+        playerFPSController.GetComponent<CharacterController>().enabled = false;
+        playerFPSController.GetComponent<CharacterController>().transform.position = respawnPoint.transform.position;
+        playerFPSController.GetComponent<CharacterController>().enabled = true;
 
+        levelHandler.deaths++;
 
 
         //player.transform.position = spawn.transform.position;

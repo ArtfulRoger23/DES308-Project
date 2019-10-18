@@ -11,12 +11,16 @@ public class Timer : MonoBehaviour
     private bool finished = false;
     float t = 0;
 
+    LevelHandler levelHandler;
+
     // Start is called before the first frame update
     void Start()
     {
-        //text = GetComponent<TextMeshProUGUI>();
-        startTime = Time.time;
         
+        startTime = Time.time;
+
+        levelHandler = FindObjectOfType<LevelHandler>();
+
     }
 
     // Update is called once per frame
@@ -25,7 +29,7 @@ public class Timer : MonoBehaviour
         if (finished)
             return;
 
-        t += /*Time.time - startTime;*/ Time.deltaTime;
+        t += Time.deltaTime;
 
         string minutes = ((int)t / 60).ToString("0");
         string seconds = (t % 60).ToString("00");
@@ -40,5 +44,6 @@ public class Timer : MonoBehaviour
 
         text.color = Color.yellow;
 
+        levelHandler.timer = t;
     }
 }
