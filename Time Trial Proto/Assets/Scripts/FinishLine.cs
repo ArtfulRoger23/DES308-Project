@@ -10,7 +10,13 @@ public class FinishLine : MonoBehaviour
     private CharacterController charController;
     public Shooting stopShooting;
 
-    
+    LevelHandler levelHandler;
+
+
+    public void Start()
+    {
+        levelHandler = FindObjectOfType<LevelHandler>();
+    }
 
     private IEnumerator WaitForSceneLoad()
     {
@@ -20,7 +26,7 @@ public class FinishLine : MonoBehaviour
     }
         private void OnTriggerStay(Collider other)
     {
-        
+        levelHandler.LevelFinished();
         GameObject.Find("PlayerFPSController").SendMessage("Finish");
 
         charController = GetComponent<CharacterController>();

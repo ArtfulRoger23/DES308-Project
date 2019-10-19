@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    LevelHandler levelHandler;
     private void Start()
     {
+        levelHandler = FindObjectOfType<LevelHandler>();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -14,6 +17,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        
         Application.Quit();
         Debug.Log("YOU QUIT!");
     }

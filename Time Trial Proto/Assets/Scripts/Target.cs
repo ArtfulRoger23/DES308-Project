@@ -17,10 +17,8 @@ public class Target : MonoBehaviour
     }
 
     void Update()
-    {/*
-        Vector3 v = startPos;
-        v.z += delta * Mathf.Sin(Time.time * speed);
-        transform.position = v;*/
+    {
+       
 
         Vector3 targetDirection = transform.forward;
         float targetMagnitude = delta * Mathf.Sin(Time.time * speed);

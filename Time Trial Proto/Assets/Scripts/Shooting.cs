@@ -34,15 +34,7 @@ public class Shooting : MonoBehaviour
             levelHandler.totalShots++;
         }
 
-        if(Input.GetKey(KeyCode.P))
-        {
-            SceneManager.LoadScene("Main Menu");
-        }
-
-        if(Input.GetKey(KeyCode.R))
-        {
-            SceneManager.LoadScene("Level 1");
-        }
+      
 
     void Shoot()
         {

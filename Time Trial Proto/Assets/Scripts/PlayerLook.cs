@@ -14,17 +14,13 @@ public class PlayerLook : MonoBehaviour
 
     private void Start()
     {
-        LockCursor();
+        
         xAxisClamp = 45.0f;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    private void LockCursor()
-    {
-        //Cursor.lockState = CursorLockMode.Locked;
-
-    }
+    
 
     private void Update()
     {

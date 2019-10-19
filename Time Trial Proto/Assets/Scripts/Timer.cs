@@ -36,6 +36,9 @@ public class Timer : MonoBehaviour
         float miliseconds = ((t * 100) % 100);
 
         text.text = minutes + ":" + seconds + ":" + miliseconds.ToString("00");
+
+
+        levelHandler.timer = t;
     }
 
     public void Finish()
@@ -44,6 +47,6 @@ public class Timer : MonoBehaviour
 
         text.color = Color.yellow;
 
-        levelHandler.timer = t;
+        
     }
 }

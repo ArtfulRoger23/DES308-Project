@@ -25,4 +25,16 @@ public class LevelHandler : MonoBehaviour
     }
 
 
+    public void LevelFinished()
+    {
+
+        Analytics.CustomEvent("gameOver", new Dictionary<string, object>
+        {
+            { "EnemiesShot", enemiesHit },
+            { "FriendliesShot", friendliesHit  },
+            { "TotalSHotsFired", totalShots },
+            { "TotalDeaths", deaths },
+            { "FinalTime", timer }
+        });
+    }
 }
