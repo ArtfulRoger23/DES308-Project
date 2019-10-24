@@ -10,6 +10,8 @@ public class Target : MonoBehaviour
     public float speed = 2.0f;
     private Vector3 startPos;
 
+    float deltaTimer = 0f;
+
 
     void Start()
     {
@@ -19,10 +21,10 @@ public class Target : MonoBehaviour
 
     void Update()
     {
-       
+        deltaTimer += Time.deltaTime;
 
         Vector3 targetDirection = transform.forward;
-        float targetMagnitude = delta * Mathf.Sin(Time.time * speed);
+        float targetMagnitude = delta * Mathf.Sin(deltaTimer * speed);
         
 
         transform.position += targetDirection * targetMagnitude;

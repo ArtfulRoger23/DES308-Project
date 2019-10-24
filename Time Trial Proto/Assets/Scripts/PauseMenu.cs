@@ -10,7 +10,12 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    LevelHandler levelHandler;
 
+    void Start()
+    {
+        levelHandler = FindObjectOfType<LevelHandler>();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
@@ -59,6 +64,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
 
         GameIsPaused = false;
+
+        
     }
 
     public void Menu()
@@ -68,6 +75,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
+        levelHandler.LevelQuit();
         Application.Quit();
     }
 }

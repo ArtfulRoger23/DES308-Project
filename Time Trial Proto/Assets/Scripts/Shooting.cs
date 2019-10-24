@@ -7,7 +7,7 @@ public class Shooting : MonoBehaviour
 {
     private AudioSource mAudioSrc;
     public float range = 100f;
-    private float impactForce = 50f;
+    private float impactForce = 200f;
 
     ScoreCount scoreCount;
 
@@ -15,14 +15,19 @@ public class Shooting : MonoBehaviour
 
     LevelHandler levelHandler;
 
-
-   
+    AudioSource source1;
+    AudioSource source2;
     private void Start()
     {
         scoreCount = FindObjectOfType<ScoreCount>();
         mAudioSrc = GetComponent<AudioSource>();
 
         levelHandler = FindObjectOfType<LevelHandler>();
+
+        source1 = GameObject.FindGameObjectWithTag("Enemy").GetComponent<AudioSource>();
+        source2 = GameObject.FindGameObjectWithTag("Friendly").GetComponent<AudioSource>();
+
+
 
     }
     void Update()
@@ -51,6 +56,7 @@ public class Shooting : MonoBehaviour
                     if (target.isEnemy == true)
                     {
                         scoreCount.score += 1;
+                        source1.Play();
                         Debug.Log("Shot enemy");
                         levelHandler.enemiesHit++;
                     
@@ -59,6 +65,7 @@ public class Shooting : MonoBehaviour
                     if (target.isEnemy == false)
                     {
                         scoreCount.score -= 1;
+                        source2.Play();
                         levelHandler.friendliesHit++;
 
                     }

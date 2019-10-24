@@ -14,6 +14,8 @@ public class LevelHandler : MonoBehaviour
 
     public int deaths = 0;
 
+    public int levelRestarts = 0;
+
     public float timer = 0f;
 
 
@@ -28,7 +30,7 @@ public class LevelHandler : MonoBehaviour
     public void LevelFinished()
     {
 
-        Analytics.CustomEvent("gameOver", new Dictionary<string, object>
+        Analytics.CustomEvent("LevelCompleted", new Dictionary<string, object>
         {
             { "EnemiesShot", enemiesHit },
             { "FriendliesShot", friendliesHit  },
@@ -37,4 +39,18 @@ public class LevelHandler : MonoBehaviour
             { "FinalTime", timer }
         });
     }
+
+    public void LevelQuit()
+    {
+        Analytics.CustomEvent("LevelQuit", new Dictionary<string, object>
+        {
+            { "EnemiesShot", enemiesHit },
+            { "FriendliesShot", friendliesHit  },
+            { "TotalSHotsFired", totalShots },
+            { "TotalDeaths", deaths },
+            { "FinalTime", timer }
+        });
+    }
+
+    
 }
