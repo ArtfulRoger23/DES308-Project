@@ -3,7 +3,7 @@
 [RequireComponent(typeof(Rigidbody))]
 public class Target : MonoBehaviour
 {
-   
+
     public bool isEnemy = false;
 
     public float delta = 0.1f;  // Amount to move left and right from the start point
@@ -14,6 +14,7 @@ public class Target : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
+        
     }
 
     void Update()

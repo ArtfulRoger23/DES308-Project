@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4231917731091591950}
   - component: {fileID: 3231876043846133230}
   - component: {fileID: 1090281589136655627}
-  - component: {fileID: -7277805534737957325}
+  - component: {fileID: 4378099074600698578}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -112,7 +112,7 @@ MonoBehaviour:
   isEnemy: 1
   delta: 0.02
   speed: 1
---- !u!64 &-7277805534737957325
+--- !u!64 &4378099074600698578
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
