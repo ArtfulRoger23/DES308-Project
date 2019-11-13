@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
+
 public class Shooting : MonoBehaviour
 {
     private AudioSource mAudioSrc;
@@ -11,12 +12,18 @@ public class Shooting : MonoBehaviour
 
     ScoreCount scoreCount;
 
+    public Timer timer;
+
     public Camera fpsCam;
 
     LevelHandler levelHandler;
 
     AudioSource source1;
     AudioSource source2;
+
+   
+
+
     private void Start()
     {
         scoreCount = FindObjectOfType<ScoreCount>();
@@ -57,7 +64,7 @@ public class Shooting : MonoBehaviour
                     {
                         scoreCount.score += 1;
                         source1.Play();
-                        Debug.Log("Shot enemy");
+                       // Debug.Log("Shot enemy");
                         levelHandler.enemiesHit++;
                     
                     }
@@ -65,6 +72,10 @@ public class Shooting : MonoBehaviour
                     if (target.isEnemy == false)
                     {
                         scoreCount.score -= 1;
+                        
+                        timer.AddTime(10);
+
+
                         source2.Play();
                         levelHandler.friendliesHit++;
 

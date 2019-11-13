@@ -7,9 +7,11 @@ public class Timer : MonoBehaviour
 {
 
     public TextMeshProUGUI text;
-    private float startTime;
+    float startTime;
     private bool finished = false;
     float t = 0;
+
+    
 
     LevelHandler levelHandler;
 
@@ -37,6 +39,7 @@ public class Timer : MonoBehaviour
 
         text.text = minutes + ":" + seconds + ":" + miliseconds.ToString("00");
 
+        
 
         levelHandler.timer = t;
     }
@@ -48,5 +51,10 @@ public class Timer : MonoBehaviour
         text.color = Color.yellow;
 
         
+    }
+
+    public void AddTime(float timeToAdd)
+    {
+        t += timeToAdd;
     }
 }
