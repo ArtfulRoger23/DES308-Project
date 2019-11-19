@@ -21,7 +21,9 @@ public class Shooting : MonoBehaviour
     AudioSource source1;
     AudioSource source2;
 
-   
+    public UIPop AddedTimePopUp;
+    public UIPop AddScorePopUp;
+    public UIPop SubtractScorePopUp;
 
 
     private void Start()
@@ -34,8 +36,7 @@ public class Shooting : MonoBehaviour
         source1 = GameObject.FindGameObjectWithTag("Enemy").GetComponent<AudioSource>();
         source2 = GameObject.FindGameObjectWithTag("Friendly").GetComponent<AudioSource>();
 
-
-
+        
     }
     void Update()
     {
@@ -62,19 +63,20 @@ public class Shooting : MonoBehaviour
 
                     if (target.isEnemy == true)
                     {
-                        scoreCount.score += 1;
+                        scoreCount.score += 100;
                         source1.Play();
-                       // Debug.Log("Shot enemy");
+                        StartCoroutine(AddScorePopUp.AddScore());
                         levelHandler.enemiesHit++;
                     
                     }
 
                     if (target.isEnemy == false)
                     {
-                        scoreCount.score -= 1;
+                        scoreCount.score -= 50;
                         
                         timer.AddTime(10);
-
+                        StartCoroutine(AddedTimePopUp.addedTimeUI());
+                        StartCoroutine(SubtractScorePopUp.SubtractScore());
 
                         source2.Play();
                         levelHandler.friendliesHit++;
