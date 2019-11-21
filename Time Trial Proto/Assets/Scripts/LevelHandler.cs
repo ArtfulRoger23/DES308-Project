@@ -18,10 +18,10 @@ public class LevelHandler : MonoBehaviour
 
     public float timer = 0f;
 
-
+    Scene thisScene;
     private void Start()
     {
-        Scene thisScene = SceneManager.GetActiveScene();
+        thisScene = SceneManager.GetActiveScene();
         AnalyticsEvent.LevelStart(thisScene.name,
                                       thisScene.buildIndex);
     }
@@ -30,7 +30,7 @@ public class LevelHandler : MonoBehaviour
     public void LevelFinished()
     {
 
-        Analytics.CustomEvent("LevelCompleted", new Dictionary<string, object>
+        Analytics.CustomEvent("LevelCompleted " + thisScene.ToString(), new Dictionary<string, object>
         {
             { "EnemiesShot", enemiesHit },
             { "FriendliesShot", friendliesHit  },
@@ -42,7 +42,7 @@ public class LevelHandler : MonoBehaviour
 
     public void LevelQuit()
     {
-        Analytics.CustomEvent("LevelQuit", new Dictionary<string, object>
+        Analytics.CustomEvent("LevelQuit " + thisScene.ToString(), new Dictionary<string, object>
         {
             { "EnemiesShot", enemiesHit },
             { "FriendliesShot", friendliesHit  },
