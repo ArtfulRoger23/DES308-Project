@@ -5,7 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class LevelMenu : MonoBehaviour
 {
-   public void PlayLevel1()
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+
+
+    public void PlayLevel1()
     {
         SceneManager.LoadScene("Level 1");
     }

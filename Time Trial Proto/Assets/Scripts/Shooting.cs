@@ -28,6 +28,7 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
         scoreCount = FindObjectOfType<ScoreCount>();
         mAudioSrc = GetComponent<AudioSource>();
 
