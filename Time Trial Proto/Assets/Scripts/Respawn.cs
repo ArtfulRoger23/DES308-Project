@@ -30,6 +30,7 @@ public class Respawn : MonoBehaviour
 
         levelHandler.deaths++;
 
+        DataRecorder.recordDeathPosition3D(transform.position);
 
         //player.transform.position = spawn.transform.position;
         Debug.Log(other.transform.name);

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Friendly
   - Enemy
+  - heatmap
   layers:
   - Default
   - TransparentFX
