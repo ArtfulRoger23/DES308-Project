@@ -55,18 +55,21 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
     }
 
-    public void Restart()
-    {
+    //public void Restart()
+   // {
 
-        Scene loadedLevel = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(loadedLevel.buildIndex);
+       // Scene loadedLevel = SceneManager.GetActiveScene();
+        //SceneManager.LoadScene(loadedLevel.buildIndex);
 
-        pauseMenuUI.SetActive(false);
+        //pauseMenuUI.SetActive(false);
 
-        GameIsPaused = false;
+        //GameIsPaused = false;
 
-        
-    }
+        //levelHandler.LevelRestart();
+        //levelHandler.levelRestarts++;
+
+
+   // }
 
     public void Menu()
     {
@@ -76,6 +79,7 @@ public class PauseMenu : MonoBehaviour
     public void Quit()
     {
         levelHandler.LevelQuit();
+        levelHandler.levelQuits++;
         Application.Quit();
     }
 }

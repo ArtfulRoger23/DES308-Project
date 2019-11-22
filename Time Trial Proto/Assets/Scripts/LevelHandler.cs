@@ -18,6 +18,8 @@ public class LevelHandler : MonoBehaviour
 
     public float timer = 0f;
 
+    public float levelQuits = 0;
+
     Scene thisScene;
     private void Start()
     {
@@ -48,7 +50,17 @@ public class LevelHandler : MonoBehaviour
             { "FriendliesShot", friendliesHit  },
             { "TotalSHotsFired", totalShots },
             { "TotalDeaths", deaths },
-            { "FinalTime", timer }
+            { "FinalTime", timer },
+            { "LevelQuit", levelQuits }
+        });
+    }
+
+    public void LevelRestart()
+    {
+        Analytics.CustomEvent("LevelRestarted " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
+        {
+            { "LevelRestart", levelRestarts },
+            
         });
     }
 
