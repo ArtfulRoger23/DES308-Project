@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+//[ExecuteAlways]
 [RequireComponent(typeof(Rigidbody))]
 public class Target : MonoBehaviour
 {
@@ -8,14 +9,16 @@ public class Target : MonoBehaviour
 
     public float delta = 0.1f;  // Amount to move left and right from the start point
     public float speed = 2.0f;
-    private Vector3 startPos;
+
+    [SerializeField]
+    public Vector3 startPos;
 
     float deltaTimer = 0f;
 
 
     void Start()
     {
-        startPos = transform.position;
+
         
     }
 
