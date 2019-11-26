@@ -54,22 +54,22 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+    
+    public void Restart()
+    {
 
-    //public void Restart()
-   // {
+        Scene loadedLevel = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(loadedLevel.buildIndex);
 
-       // Scene loadedLevel = SceneManager.GetActiveScene();
-        //SceneManager.LoadScene(loadedLevel.buildIndex);
+        pauseMenuUI.SetActive(false);
 
-        //pauseMenuUI.SetActive(false);
+        GameIsPaused = false;
 
-        //GameIsPaused = false;
-
-        //levelHandler.LevelRestart();
-        //levelHandler.levelRestarts++;
+        levelHandler.LevelRestart();
+        levelHandler.levelRestarts++;
 
 
-   // }
+    }
 
     public void Menu()
     {
