@@ -22,16 +22,16 @@ public class LevelHandler : MonoBehaviour
 
     Scene thisScene;
     private void Start()
-    {/*
+    {
         thisScene = SceneManager.GetActiveScene();
         AnalyticsEvent.LevelStart(thisScene.name,
-                                      thisScene.buildIndex);*/
+                                      thisScene.buildIndex);
     }
 
 
     public void LevelFinished()
     {
-        /*
+        
         Analytics.CustomEvent("LevelCompleted " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
         {
             { "EnemiesShot", enemiesHit },
@@ -39,11 +39,11 @@ public class LevelHandler : MonoBehaviour
             { "TotalSHotsFired", totalShots },
             { "TotalDeaths", deaths },
             { "FinalTime", timer }
-        });*/
+        });
     }
 
     public void LevelQuit()
-    {/*
+    {
         Analytics.CustomEvent("LevelQuit " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
         {
             { "EnemiesShot", enemiesHit },
@@ -52,16 +52,16 @@ public class LevelHandler : MonoBehaviour
             { "TotalDeaths", deaths },
             { "FinalTime", timer },
             { "LevelQuit", levelQuits }
-        });*/
+        });
     }
 
     public void LevelRestart()
-    {/*
+    {
         Analytics.CustomEvent("LevelRestarted " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
         {
             { "LevelRestart", levelRestarts },
             
-        });*/
+        });
     }
 
     

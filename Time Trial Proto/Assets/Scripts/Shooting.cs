@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Shooting : MonoBehaviour
 {
     private AudioSource mAudioSrc;
-    public float range = 100f;
+    public float range = 5000f;
     private float impactForce = 200f;
 
     ScoreCount scoreCount;
