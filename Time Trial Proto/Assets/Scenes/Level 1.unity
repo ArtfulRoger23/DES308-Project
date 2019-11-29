@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4500168, g: 0.50007313, b: 0.57550794, a: 1}
+  m_IndirectSpecularColor: {r: 0.45001733, g: 0.50007385, b: 0.5755091, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -43646,7 +43646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fa8220360946f43b89240e53e3efc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 40
+  range: 60
   timer: {fileID: 242900527}
   fpsCam: {fileID: 1553832119}
   AddedTimePopUp: {fileID: 457569963}
