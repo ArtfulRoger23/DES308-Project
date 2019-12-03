@@ -63529,8 +63529,10 @@ MonoBehaviour:
   friendliesHit: 0
   totalShots: 0
   deaths: 0
-  levelRestarts: 0
   timer: 0
+  finalScore: 0
+  totalScore: 0
+  levelRestarts: 0
   levelQuits: 0
 --- !u!4 &2064254771
 Transform:

@@ -14,10 +14,13 @@ public class LevelHandler : MonoBehaviour
 
     public int deaths = 0;
 
-    public int levelRestarts = 0;
-
     public float timer = 0f;
 
+    public int finalScore = 0;
+
+    public float totalScore = 0;
+
+    public int levelRestarts = 0;
     public float levelQuits = 0;
 
     Scene thisScene;
@@ -38,7 +41,9 @@ public class LevelHandler : MonoBehaviour
             { "FriendliesShot", friendliesHit  },
             { "TotalSHotsFired", totalShots },
             { "TotalDeaths", deaths },
-            { "FinalTime", timer }
+            { "FinalTime", timer },
+            { "FinalScore", finalScore },
+            { "TotalScore", totalScore }
         });
     }
 
