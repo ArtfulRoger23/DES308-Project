@@ -26974,11 +26974,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 126.92536
       objectReference: {fileID: 0}
-    - target: {fileID: 3626663057633254263, guid: 0096b9b89bd36a94bb23956e734b4902,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1273645275640740754, guid: 0096b9b89bd36a94bb23956e734b4902,
         type: 3}
       propertyPath: delta
@@ -26988,6 +26983,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626663057633254263, guid: 0096b9b89bd36a94bb23956e734b4902,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0096b9b89bd36a94bb23956e734b4902, type: 3}
