@@ -10,9 +10,12 @@ public class ScoreCount : MonoBehaviour
 
     TextMeshProUGUI text;
 
+    LevelHandler levelHandler;
+
     // Start is called before the first frame update
     void Start()
     {
+        levelHandler = FindObjectOfType<LevelHandler>();
         text = GetComponent<TextMeshProUGUI>();
     }
 
@@ -20,6 +23,6 @@ public class ScoreCount : MonoBehaviour
     void Update()
     {
         text.text = "Score: " + score;
-
+        levelHandler.finalScore = score;
     }
 }

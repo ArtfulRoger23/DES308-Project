@@ -18,7 +18,7 @@ public class LevelHandler : MonoBehaviour
 
     public int finalScore = 0;
 
-    public float totalScore = 0;
+    
 
     public int levelRestarts = 0;
     public float levelQuits = 0;
@@ -43,7 +43,7 @@ public class LevelHandler : MonoBehaviour
             { "TotalDeaths", deaths },
             { "FinalTime", timer },
             { "FinalScore", finalScore },
-            { "TotalScore", totalScore }
+            
         });
     }
 

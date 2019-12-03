@@ -47,10 +47,13 @@ public class ScoreScreen : MonoBehaviour
 
         finalTotal.text = (t * score).ToString();
 
+        
+
+
         GetComponent<CanvasGroup>().alpha = 1;
 
-        levelHandler.finalScore = Mathf.RoundToInt(score);
-        levelHandler.totalScore = (t * score);
+        
+       
 
     }
 }
