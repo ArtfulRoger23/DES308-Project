@@ -45,7 +45,7 @@ public class ScoreScreen : MonoBehaviour
 
         finalscore.text = score.ToString();
 
-        finalTotal.text = (t * score).ToString();
+        finalTotal.text = (score / t).ToString();
 
         
 
