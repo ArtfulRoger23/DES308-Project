@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI text;
     float startTime;
     private bool finished = false;
-    float t = 0;
+    public float t = 0;
 
     
 
