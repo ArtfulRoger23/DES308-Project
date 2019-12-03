@@ -42,27 +42,27 @@ public class LevelHandler : MonoBehaviour
         });
     }
 
-    public void LevelQuit()
-    {
-        Analytics.CustomEvent("LevelQuit " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
-        {
-            { "EnemiesShot", enemiesHit },
-            { "FriendliesShot", friendliesHit  },
-            { "TotalSHotsFired", totalShots },
-            { "TotalDeaths", deaths },
-            { "FinalTime", timer },
-            { "LevelQuit", levelQuits }
-        });
-    }
+    //public void LevelQuit()
+    //{
+    //    Analytics.CustomEvent("LevelQuit " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
+    //    {
+    //        { "EnemiesShot", enemiesHit },
+    //        { "FriendliesShot", friendliesHit  },
+    //        { "TotalSHotsFired", totalShots },
+    //        { "TotalDeaths", deaths },
+    //        { "FinalTime", timer },
+    //        { "LevelQuit", levelQuits }
+    //    });
+    //}
 
-    public void LevelRestart()
-    {
-        Analytics.CustomEvent("LevelRestarted " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
-        {
-            { "LevelRestart", levelRestarts },
+    //public void LevelRestart()
+    //{
+    //    Analytics.CustomEvent("LevelRestarted " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
+    //    {
+    //        { "LevelRestart", levelRestarts },
             
-        });
-    }
+    //    });
+    //}
 
     
 }

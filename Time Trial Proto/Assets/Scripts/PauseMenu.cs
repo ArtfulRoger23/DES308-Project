@@ -65,8 +65,8 @@ public class PauseMenu : MonoBehaviour
 
         GameIsPaused = false;
 
-        levelHandler.LevelRestart();
-        levelHandler.levelRestarts++;
+        //levelHandler.LevelRestart();
+        //levelHandler.levelRestarts++;
 
 
     }
@@ -78,8 +78,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
-        levelHandler.LevelQuit();
-        levelHandler.levelQuits++;
+        //levelHandler.LevelQuit();
+        //levelHandler.levelQuits++;
         Application.Quit();
     }
 }
