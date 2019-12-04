@@ -32,20 +32,20 @@ public class LevelHandler : MonoBehaviour
     }
 
 
-    public void LevelFinished()
-    {
+    //public void LevelFinished()
+    //{
         
-        Analytics.CustomEvent("LevelCompleted " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
-        {
-            { "EnemiesShot", enemiesHit },
-            { "FriendliesShot", friendliesHit  },
-            { "TotalSHotsFired", totalShots },
-            { "TotalDeaths", deaths },
-            { "FinalTime", timer },
-            { "FinalScore", finalScore },
+    //    Analytics.CustomEvent("LevelCompleted " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
+    //    {
+    //        { "EnemiesShot", enemiesHit },
+    //        { "FriendliesShot", friendliesHit  },
+    //        { "TotalSHotsFired", totalShots },
+    //        { "TotalDeaths", deaths },
+    //        { "FinalTime", timer },
+    //        { "FinalScore", finalScore },
             
-        });
-    }
+    //    });
+    //}
 
     //public void LevelQuit()
     //{
