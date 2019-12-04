@@ -32,42 +32,42 @@ public class LevelHandler : MonoBehaviour
     }
 
 
-    //public void LevelFinished()
-    //{
-        
-    //    Analytics.CustomEvent("LevelCompleted " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
-    //    {
-    //        { "EnemiesShot", enemiesHit },
-    //        { "FriendliesShot", friendliesHit  },
-    //        { "TotalSHotsFired", totalShots },
-    //        { "TotalDeaths", deaths },
-    //        { "FinalTime", timer },
-    //        { "FinalScore", finalScore },
-            
-    //    });
-    //}
+    public void LevelFinished()
+    {
 
-    //public void LevelQuit()
-    //{
-    //    Analytics.CustomEvent("LevelQuit " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
-    //    {
-    //        { "EnemiesShot", enemiesHit },
-    //        { "FriendliesShot", friendliesHit  },
-    //        { "TotalSHotsFired", totalShots },
-    //        { "TotalDeaths", deaths },
-    //        { "FinalTime", timer },
-    //        { "LevelQuit", levelQuits }
-    //    });
-    //}
+        Analytics.CustomEvent("LevelCompleted " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
+        {
+            { "EnemiesShot", enemiesHit },
+            { "FriendliesShot", friendliesHit  },
+            { "TotalSHotsFired", totalShots },
+            { "TotalDeaths", deaths },
+            { "FinalTime", timer },
+            { "FinalScore", finalScore },
 
-    //public void LevelRestart()
-    //{
-    //    Analytics.CustomEvent("LevelRestarted " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
-    //    {
-    //        { "LevelRestart", levelRestarts },
-            
-    //    });
-    //}
+        });
+    }
 
-    
-}
+        //public void LevelQuit()
+        //{
+        //    Analytics.CustomEvent("LevelQuit " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
+        //    {
+        //        { "EnemiesShot", enemiesHit },
+        //        { "FriendliesShot", friendliesHit  },
+        //        { "TotalSHotsFired", totalShots },
+        //        { "TotalDeaths", deaths },
+        //        { "FinalTime", timer },
+        //        { "LevelQuit", levelQuits }
+        //    });
+        //}
+
+        //public void LevelRestart()
+        //{
+        //    Analytics.CustomEvent("LevelRestarted " + SceneManager.GetActiveScene().name.ToString(), new Dictionary<string, object>
+        //    {
+        //        { "LevelRestart", levelRestarts },
+
+        //    });
+        //}
+
+
+    }

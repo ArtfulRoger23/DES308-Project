@@ -7,11 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -7794581587623161366, guid: bf700aac41cae564b8ff936c1b71dde3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2487707513344362450, guid: bf700aac41cae564b8ff936c1b71dde3,
         type: 3}
       propertyPath: m_Name
@@ -81,6 +76,16 @@ PrefabInstance:
         type: 3}
       propertyPath: isEnemy
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378099074600698578, guid: bf700aac41cae564b8ff936c1b71dde3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7794581587623161366, guid: bf700aac41cae564b8ff936c1b71dde3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2957857054878479884, guid: bf700aac41cae564b8ff936c1b71dde3, type: 3}
