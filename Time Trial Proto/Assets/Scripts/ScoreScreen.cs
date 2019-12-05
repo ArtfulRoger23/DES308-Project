@@ -15,6 +15,8 @@ public class ScoreScreen : MonoBehaviour
 
     LevelHandler levelHandler;
 
+    public GameObject UI;
+
     void Start()
     {
         levelHandler = FindObjectOfType<LevelHandler>();
@@ -47,8 +49,8 @@ public class ScoreScreen : MonoBehaviour
 
         finalTotal.text = (score / t).ToString();
 
-        
 
+        UI.SetActive(false);
 
         GetComponent<CanvasGroup>().alpha = 1;
 

@@ -14,6 +14,8 @@ public class FinishLine : MonoBehaviour
 
     public GameObject ScoreScreenUI;
 
+    
+
 
     public void Start()
     {
@@ -29,6 +31,7 @@ public class FinishLine : MonoBehaviour
         private void OnTriggerStay(Collider other)
     {
         levelHandler.LevelFinished();
+        
         FindObjectOfType<ScoreScreen>().SetAll();
         GameObject.Find("PlayerFPSController").SendMessage("Finish");
 
