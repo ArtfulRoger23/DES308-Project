@@ -20,20 +20,25 @@ public class Respawn : MonoBehaviour
     }
 
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider otherObject)
     {
-        charController = GetComponent<CharacterController>();
 
-        playerFPSController.GetComponent<CharacterController>().enabled = false;
-        playerFPSController.GetComponent<CharacterController>().transform.position = respawnPoint.transform.position;
-        playerFPSController.GetComponent<CharacterController>().enabled = true;
 
-        levelHandler.deaths++;
+        if (otherObject.gameObject.CompareTag("Player"))
+        {
+            charController = GetComponent<CharacterController>();
 
-        DataRecorder.recordDeathPosition3D(transform.position);
+            playerFPSController.GetComponent<CharacterController>().enabled = false;
+            playerFPSController.GetComponent<CharacterController>().transform.position = respawnPoint.transform.position;
+            playerFPSController.GetComponent<CharacterController>().enabled = true;
 
-        //player.transform.position = spawn.transform.position;
-        Debug.Log(other.transform.name);
+            levelHandler.deaths++;
+
+            DataRecorder.recordDeathPosition3D(transform.position);
+
+            //player.transform.position = spawn.transform.position;
+            Debug.Log(otherObject.transform.name);
+        }
     }
 
 
