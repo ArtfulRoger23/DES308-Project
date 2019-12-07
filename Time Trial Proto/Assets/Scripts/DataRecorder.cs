@@ -13,8 +13,9 @@ using UnityEngine.SceneManagement;
  * Modified by: Hadi Mehrpouya
  * Date last modified: 11/10/2019
  */
-public static class DataRecorder {
-    public static string m_path= "Assets/Resources/Text/";
+public static class DataRecorder
+{
+    public static string m_path = "Assets/Resources/Text/";
     /*
      * This function will open the file using the path variable
      * and then adds whatever the user is sending to the end of the file
@@ -25,8 +26,8 @@ public static class DataRecorder {
     {
         string filePath = m_path + SceneManager.GetActiveScene().name;
         bool result = false;
-        string lineToAdd= _pos.x + "," + _pos.y + "," + _pos.z;
-        using (StreamWriter sw = File.AppendText(filePath+".txt")) //This line will try to open the file and if it doesn't exist, if will make it!
+        string lineToAdd = _pos.x + "," + _pos.y + "," + _pos.z;
+        using (StreamWriter sw = File.AppendText(filePath + ".txt")) //This line will try to open the file and if it doesn't exist, if will make it!
         {
             //Write death position vector to our text file as a new line
             sw.WriteLine(lineToAdd);
